@@ -2,4 +2,23 @@
 
 {% block content %}
 <h1>Crypto News Site</h1>
+
+<div class="container">
+    <div class="row">
+        {% for item in news_api.Data %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ item.imageurl }}" class="card-img-top" alt="{{ item.source }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{ item.body }}</p>
+                <a href="{{ item.url }}" class="btn btn-primary">Read more...</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<hr>
+<br>
+{{ news_api.Data }}
 {% endblock content %}
