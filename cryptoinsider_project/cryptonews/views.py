@@ -5,6 +5,11 @@ from django.shortcuts import render
 
 
 def home(request):
-    news_api_request = requests.get('https://min-api.cryptocompare.com/data/v2/news/?lang=EN')
-    news_api = json.loads(news_api_request.content)
-    return render(request, 'cryptonews/home.html', {'news_api': news_api})
+    price_request = requests.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XRP&tsyms=USD')
+    price = json.loads(price_request.content)
+
+
+    news_request = requests.get('https://min-api.cryptocompare.com/data/v2/news/?lang=EN')
+    news = json.loads(news_request.content)
+
+    return render(request, 'cryptonews/home.html', {'news': news, 'price': price})
