@@ -1,0 +1,23 @@
+{% extends 'cryptonews/base.html' %}
+
+{% block content %}
+<br/>
+<div class="container">
+    <div class="row">
+        {% for item in news.Data %}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ item.imageurl }}" class="card-img-top" alt="{{ item.source }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text">{{ item.body }}</p>
+                    <a href="{{ item.url }}" class="btn btn-secondary">Read more...</a>
+                </div>
+            </div>
+            <br/>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}
