@@ -2,9 +2,8 @@
 
 {% block content %}
 <br/>
-{% if coin.Response %}
-Sorry, that symbol does not exist. Please try again.
-{% else %}
+<h3 align="center">Top Cryptocurrencies by Market Capitalization</h3>
+<br/>
 <table class="table table-striped table-bordered table-hover">
     <thead>
     <tr>
@@ -37,6 +36,4 @@ Sorry, that symbol does not exist. Please try again.
     {% endfor %}
     </tbody>
 </table>
-{% endif %}
-
 {% endblock content %}

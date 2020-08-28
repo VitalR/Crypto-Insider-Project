@@ -14,12 +14,11 @@ def home(request):
     return render(request, 'cryptonews/home.html', {'news': news, 'price': price})
 
 
-
 def search_coin(request):
     if request.method == 'POST':
         coin = request.POST['coin']
         price_request = requests.get(
-            'https://min-api.cryptocompare.com/data/pricemultifull?fsyms='+coin+'&tsyms=USD')
+            'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=' + coin + '&tsyms=USD')
         price = json.loads(price_request.content)
         return render(request, 'cryptonews/search_coin.html', {'coin': coin, 'price': price})
     else:
@@ -33,7 +32,8 @@ def news(request):
 
 
 def prices(request):
-    price_request = requests.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XRP,USDT,LINK,DOT,BCH,LTC,BSV,BNB,ADA,EOS,XTZ,XLM,TRX,XMR,USDC,NEO,VET,MIOTA,DASH,ETC,ZEC,LEND,ICX,WAVES,MKR,YFI&tsyms=USD')
+    price_request = requests.get(
+        'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XRP,USDT,LINK,DOT,BCH,LTC,BSV,BNB,ADA,EOS,XTZ,XLM,TRX,XMR,USDC,NEO,VET,MIOTA,DASH,ETC,ZEC,LEND,ICX,WAVES,MKR,YFI&tsyms=USD')
     price = json.loads(price_request.content)
 
-    return render(request, 'cryptonews/home.html', {'price': price})
+    return render(request, 'cryptonews/prices.html', {'price': price})

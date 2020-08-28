@@ -16,11 +16,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'prices' %}">Prices</a>
             </li>
-            <!--
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'search_coin' %}">Search for Coin</a>
+                <a class="nav-link" href="#">Learn</a>
             </li>
-            -->
+
         </ul>
         <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'search_coin' %}">{% csrf_token %}
             <input class="form-control mr-sm-2" type="search" placeholder="Search for Coin" aria-label="Search" name="coin">
