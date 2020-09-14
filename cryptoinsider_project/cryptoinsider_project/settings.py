@@ -123,9 +123,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Dir where uploaded profile picture files will be saved
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Url how to get this folder by browser
+MEDIA_URL = '/media/'
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Redirect to blog-home page when User successfully log in
 LOGIN_REDIRECT_URL = 'blog-home'
 # Redirect to Login page in case not authenticates User type /profile/ in url
 LOGIN_URL = 'login'
+
