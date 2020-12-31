@@ -4,16 +4,16 @@
 <br/>
 <h3 align="center">Top Cryptocurrencies News</h3>
 <br/>
-<div class="container">
+<div align="center" class="container">
     <div class="row">
         {% for item in news.Data %}
         <div class="col-sm">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 20rem;">
                 <img src="{{ item.imageurl }}" class="card-img-top" alt="{{ item.source }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
-                    <p class="card-text">{{ item.body }}</p>
-                    <a href="{{ item.url }}" class="btn btn-secondary">Read more...</a>
+<!--                    <p class="card-text">{{ item.body }}</p>-->
+                    <a href="{{ item.url }}" class="btn btn-secondary btn-sm">Read more...</a>
                 </div>
             </div>
             <br/>

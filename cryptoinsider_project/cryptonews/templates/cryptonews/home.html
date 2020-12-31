@@ -37,18 +37,18 @@
     </tbody>
 </table>
 <br/>
-<hr>
+<hr class="my-3">
 <br/>
-<div class="container">
+<div align="center" class="container">
     <div class="row">
         {% for item in news.Data|slice:"0:3" %}
         <div class="col-sm">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 21rem;">
                 <img src="{{ item.imageurl }}" class="card-img-top" alt="{{ item.source }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
-                    <p class="card-text">{{ item.body }}</p>
-                    <a href="{{ item.url }}" class="btn btn-secondary">Read more...</a>
+<!--                    <p class="card-text">{{ item.body }}</p>-->
+                    <a href="{{ item.url }}" class="btn btn-secondary btn-sm">Read more...</a>
                 </div>
             </div>
             <br/>
@@ -56,7 +56,7 @@
         {% endfor %}
     </div>
 </div>
-<hr>
+<hr class="my-3">
 <br>
 {% include 'cryptonews/_content_cryptocurrency.html' %}
 {% endblock content %}

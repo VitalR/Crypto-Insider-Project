@@ -37,3 +37,11 @@ def prices(request):
     price = json.loads(price_request.content)
 
     return render(request, 'cryptonews/prices.html', {'price': price})
+
+
+def crypto_basics(request):
+    return render(request, 'cryptonews/crypto_basics.html')
+
+
+# def crypto_article(request):
+#     return render(request, '')

@@ -1,9 +1,9 @@
 {% load static %}
 <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">
-            <img src="{% static 'growth.png' %}" height="35" width="35" class="d-inline-block aligh-top mr-2"/>
-            CryptoInsider</a>
+        <a class="navbar-brand" href="{% url 'home' %}" style="font-family: 'Abril Fatface', cursive; font-size: 1.8rem;">
+            <img src="{% static 'growth.png' %}" height="45" width="45" class="d-inline-block aligh-top mr-2"/>
+            Crypto Insider</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,24 +16,39 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'prices' %}">Prices</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Learn</a>
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="#">Learn</a>-->
+<!--                </li>-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Learn
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'crypto_basics' %}">Crypto Basics</a></li>
+                        <li><a class="dropdown-item disabled" href="#">Market Analysis</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item disabled" href="#">Something else here</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'blog-home' %}">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'blog-about' %}">About</a>
-                </li>
+                <!--                <li class="nav-item">-->
+                <!--                    <a class="nav-link" href="{% url 'blog-about' %}">About</a>-->
+                <!--                </li>-->
             </div>
             <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'search_coin' %}">{% csrf_token %}
-                <input class="form-control mr-sm-2 bg-primary " type="search" placeholder="Search for Coin" aria-label="Search"
+                <input class="form-control mr-sm-2 text-white bg-primary" type="search" placeholder="Search for Coin(BTC)"
+                       aria-label="Search"
                        name="coin">
-<!--                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
-<!--                <div class="form-group has-search">-->
-<!--                    <span class="fa fa-search form-control-feedback"></span>-->
-<!--                    <input type="text" class="form-control" placeholder="Search for Coin">-->
-<!--                </div>-->
+                <!--                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>-->
+                <!--                <div class="form-group has-search">-->
+                <!--                    <span class="fa fa-search form-control-feedback"></span>-->
+                <!--                    <input type="text" class="form-control" placeholder="Search for Coin">-->
+                <!--                </div>-->
             </form>
             <div class="navbar-nav">
                 {% if user.is_authenticated %}

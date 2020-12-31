@@ -1,0 +1,66 @@
+{% extends 'cryptonews/base.html' %}
+<!--<title>Crypto Basics</title>-->
+{% block content %}
+<br/>
+<h3 align="center">Crypto Basics</h3>
+<br/>
+
+
+<article class="media content-section">
+    <h2 class="article-title">What Is a Blockchain?</h2>
+    <div class="media-body">
+
+        <p class="article-content">
+
+            To put it simply, a blockchain is a public, decentralized, record-keeping database used for all cryptocurrency transactions. Every time you make a purchase with a cryptocurrency, the transaction is recorded and then made available to the public. The information about the transaction gets stored into a “block” and then added to the global network of blocks, known as the “blockchain.”
+
+
+
+Most cryptocurrencies have their own blockchain (and some cryptocurrencies are not blockchain-based, like IOTA’s Tangle, but that’s more rare) — you can check out CoinMarketCap’s blockchain explorers here for Bitcoin, Ethereum, Litecoin and Binance Coin.
+
+
+
+How Is Information Stored in the Blockchain?
+Each block is a digital record that contains the time of purchase, purchase amount and the two parties involved in the transaction. The transaction can be traced by a “hash,” a unique code made of numbers and letters that is generated every time a purchase is made with cryptocurrency.  The “hash” can be thought of as the DNA strand of a transaction, and cannot be altered once the transaction has been completed and sent to the blockchain. Each new transaction is added to the end of the blockchain. As more and more people make crypto transactions, the “height” of the blockchain grows.
+
+
+
+Every transaction must be verified before it gets added to the ledger. Once a transaction is made, consensus mechanisms (such as “proof of work” or “proof of stake”) are activated to confirm that the transaction is legitimate and does not already exist in the system. These consensus mechanisms facilitate social trust and help ensure that no payment is charged more than once. However, such consensus protocols can delay the transaction time because they requires sophisticated computational power to achieve consensus.
+
+
+
+Generally, blockchain transactions are fast; however, the speed of the transaction depends on several factors, including the type of cryptocurrency used. For instance, some cryptocurrencies have faster transaction rates (TPS) than others.
+
+
+
+As an example, although most Bitcoin transactions can be completed in 10 minutes or less, some Bitcoin transactions can take days to confirm. Such delays can occur when there is a high volume of transactions and a decrease in hash rate. When a transaction is made over a blockchain, miners work to process the “hash” and confirm the transaction into a respective “block.” Each “block” for Bitcoin is capped at 1MB, which means it can get competitive to have your transaction included in a present “block.”
+
+‍
+
+What Makes Blockchain Technology Revolutionary?
+Blockchain technology cuts out the middleman in any transaction, creating an immutable record on its ledger. Have you ever tried to buy something with your debit card, only to find out that the check you deposited last week still hasn’t made it into your account? With blockchain, there is no middleman (like a bank) that has control over your transactions — blockchain transactions are strictly between two parties, or peer-to-peer.
+
+
+
+Transactions made on blockchain take place without the approval of traditional financial institutions. Unlike the standard documentation that banks may require from their clients, anyone with an internet connection can gain access to blockchain, making blockchain a revolutionary and disruptive movement.
+
+
+
+Moreover, blockchain can be used to record information that would normally be censored by governments. Blockchain was designed with a utopian “censorship-resistance” vision in mind, which means that political movements in countries like Belarus can use blockchain technology to ensure that their money can freely travel. There have also been instances in China where people have posted sensitive documents on blockchain to maintain a permanent record of events that the media was not allowed to cover.
+
+‍
+
+Is Blockchain Secure?
+The security of blockchain rests largely on the concept behind distributed ledger technology. A blockchain is not stored in a single place; rather, its data is stored in nodes, computers and servers all around the world. Due to the peer-to-peer nature of the blockchain, no centralized agency can own or edit this information, providing for greater security, cooperation and trust.
+
+‍
+
+Hacking an entire blockchain network would be nearly impossible — though a hacker could potentially alter some aspects of the data, there is no centralized system to attack. Because blockchain is organized chronologically and each “hash” contains information on the “hash” that comes before it, the data stored in each “block” cannot easily be modified by hackers or outside parties, as it would quickly be “orphaned” as a fraudulent block . However, potential security threats can arise if miners successfully monopolize the blockchain. In instances where miners gain a majority and assert control of the “hash rate”, they can conduct a “51% attack” to disrupt and reverse transactions.
+
+
+        </p>
+    </div>
+</article>
+
+
+{% endblock content %}
